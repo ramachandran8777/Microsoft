@@ -1,5 +1,5 @@
 
-# Virtualization based security (VBS) and Guard Credentials
+# Virtualization based security (VBS) and  Credentials Guard
 
 Virtualization Based Security (VBS) is a Microsoft Windows feature that was introduced in Windows 10, Windows Server 2016 and higher. Microsoft VBS uses hardware virtualization features to create and isolate a secure region of memory from the normal operating system. For example, Windows can use this isolated memory space to store credentials (Credential Guard) to mitigate the pass the hash vulnerability.
 Virtualization Based Security effectively reduces the Windows attack surface, so even if a malicious actor gains access to the OS kernel, the protected content can prevent code execution and the access of secrets, such as system credentials
