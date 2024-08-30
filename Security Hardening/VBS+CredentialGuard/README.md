@@ -104,21 +104,24 @@ Microsoft released a PowerShell script to verify the readiness of VBS with those
 - Download the Device Guard and Credential Guard hardware readiness tool powershell script.
 - Run the following command to verify if this device is Device Guard and Credential Guard capable.
     .\DG_Readiness_Tool_v3.6.ps1 -Capable
-    
+    ![image](https://github.com/user-attachments/assets/14cd216c-1f0c-4da3-9edd-ad5b91013a7d)
     Note: Running the script for the first time requires a reboot, because of the Driver verifier that needs to be enabled.
 - Re-run the script again and this time you would see something like this.
     HVCI and Credential Guard is enabled, the only thing that is absent is TPM.
-    
+    ![image](https://github.com/user-attachments/assets/ca2da328-543c-4933-9954-43db977a6b59)
+
     TPM is absent and secure boot is not enabled.
 - Power off the Windows VM and enable Virtualization Based Security, EFI Firmware and Security Boot.
-  
+  ![image](https://github.com/user-attachments/assets/45fe294d-33a3-40e4-a894-677bc2812a97)
+
 - Power off the Windows VM and add a Trusted Platform Module (vTPM).
     Note: if you cannot see Trusted Platform Module under Other devices you probably don’t have a configured Key Provider in vCenter.
-    
+    ![image](https://github.com/user-attachments/assets/42e17a6a-adc3-470b-b866-dcf76e0680be)
 
     Add vTPM device
 - Power on the Windows VM and perform the same powershell command.
-   
+   ![image](https://github.com/user-attachments/assets/a8312751-6b77-4e3f-b2d3-cc5cdebd17da)
+
 
 Verify status with the readiness tool again.
 
